@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->id();
             $table->string('title')->unique();
+            $table->text('description');
             $table->integer('downloads')->default(0);
             $table->string('download-link'); 
+            $table->text('platform');
             $table->timestamps();
         });
     }
