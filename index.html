@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="gresta — independent game developer crafting immersive gaming experiences." />
+    <title>gresta — Game Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Orbitron", "system-ui", "sans-serif"],
+              sans: ["DM Sans", "system-ui", "sans-serif"],
+            },
+            colors: {
+              void: "#07070c",
+              mist: "#0f1119",
+            },
+            backgroundImage: {
+              "grid-fade":
+                "linear-gradient(to bottom, rgba(7,7,12,0.2), rgba(7,7,12,0.95)), linear-gradient(rgba(34,211,238,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.08) 1px, transparent 1px)",
+            },
+            animation: {
+              float: "float 8s ease-in-out infinite",
+              shimmer: "shimmer 2.5s linear infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0) scale(1)" },
+                "50%": { transform: "translateY(-12px) scale(1.02)" },
+              },
+              shimmer: {
+                "0%": { backgroundPosition: "200% 0" },
+                "100%": { backgroundPosition: "-200% 0" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #07070c;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen font-sans text-zinc-300 antialiased">
+    <!-- Ambient background -->
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div class="absolute -left-1/4 top-0 h-[520px] w-[520px] rounded-full bg-cyan-500/15 blur-[120px]"></div>
+      <div class="absolute -right-1/4 bottom-0 h-[480px] w-[480px] rounded-full bg-fuchsia-600/12 blur-[120px]"></div>
+      <div
+        class="absolute inset-0 bg-[length:48px_48px] bg-grid-fade opacity-90"
+        style="background-size: 48px 48px, 48px 48px, 48px 48px"
+      ></div>
+    </div>
+
+    <header class="sticky top-0 z-50 border-b border-white/5 bg-void/80 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8" aria-label="Main">
+        <a href="index.html" class="group flex items-center gap-2">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-400 to-fuchsia-600 font-display text-sm font-bold text-white shadow-lg shadow-fuchsia-900/40 transition group-hover:scale-105">G</span>
+          <span class="font-display text-lg font-semibold tracking-wide text-white">gresta</span>
+        </a>
+        <ul class="flex items-center gap-1 sm:gap-2">
+          <li>
+            <a
+              href="index.html"
+              class="rounded-lg px-3 py-2 text-sm font-medium text-white transition hover:bg-white/5"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="games.html" class="rounded-lg px-3 py-2 text-sm font-medium text-zinc-400 transition hover:bg-white/5 hover:text-white">Games</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="relative overflow-hidden px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24 lg:px-8">
+        <div class="mx-auto max-w-6xl">
+          <div class="max-w-3xl">
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300/90">
+              <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-cyan-400"></span>
+              Indie studio
+            </p>
+            <h1 class="font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+              <span class="block bg-gradient-to-r from-white via-cyan-100 to-fuchsia-200 bg-clip-text text-transparent">gresta - Game Developer</span>
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400 sm:text-xl">Creating immersive gaming experiences</p>
+            <div class="mt-10 flex flex-wrap items-center gap-4">
+              <a
+                href="games.html"
+                class="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-fuchsia-600 px-8 py-3.5 text-sm font-bold uppercase tracking-widest text-void shadow-[0_0_40px_-8px_rgba(34,211,238,0.55)] transition hover:brightness-110 hover:shadow-[0_0_55px_-6px_rgba(217,70,239,0.45)] focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+              >
+                View Games
+                <svg class="h-4 w-4 transition group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <a
+                href="https://itch.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/25 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
+              >
+                itch.io
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Decorative HUD -->
+        <div class="pointer-events-none absolute right-0 top-1/2 hidden -translate-y-1/2 lg:block">
+          <div class="relative h-72 w-72 animate-float rounded-full border border-white/10 bg-gradient-to-br from-cyan-500/20 to-fuchsia-600/10 p-1 shadow-2xl">
+            <div class="h-full w-full rounded-full border border-dashed border-white/20"></div>
+            <div class="absolute inset-8 rounded-full border border-white/5 bg-void/60 backdrop-blur-sm"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured games -->
+      <section class="border-t border-white/5 bg-mist/40 px-4 py-20 sm:px-6 lg:px-8" aria-labelledby="featured-heading">
+        <div class="mx-auto max-w-6xl">
+          <div class="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 id="featured-heading" class="font-display text-2xl font-bold text-white sm:text-3xl">Featured games</h2>
+              <p class="mt-2 max-w-xl text-zinc-400">Recent releases and highlights. Play on itch.io — each title opens in a new tab.</p>
+            </div>
+            <a
+              href="games.html"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
+            >
+              See all games
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </a>
+          </div>
+          <div id="featured-games" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 bg-void/90 px-4 py-12 sm:px-6 lg:px-8">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
+        <div class="flex items-center gap-2">
+          <span class="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-cyan-400 to-fuchsia-600 font-display text-xs font-bold text-white">G</span>
+          <span class="font-display text-sm font-semibold text-white">gresta</span>
+        </div>
+        <p class="text-center text-sm text-zinc-500">&copy; <span id="year"></span> gresta. Built with HTML, Tailwind &amp; JS.</p>
+        <div class="flex gap-4 text-sm text-zinc-400">
+          <a href="index.html" class="transition hover:text-white">Home</a>
+          <a href="games.html" class="transition hover:text-white">Games</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/games-data.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
